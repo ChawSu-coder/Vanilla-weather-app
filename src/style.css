@@ -56,12 +56,14 @@ button:hover {
 
 .weatherTemperature img {
   margin-right: 5px;
+  width: 90px;
+  height: 90px;
 }
 
 .weatherTemperature strong {
   font-size: 45px;
   font-weight: 400;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 .weatherTemperature .units {
