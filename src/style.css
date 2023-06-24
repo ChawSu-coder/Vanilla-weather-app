@@ -1,0 +1,75 @@
+body {
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/086/865/original/bluesky.jpeg?1687600478");
+  background-size: contain;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+ul,
+p {
+  list-style: none;
+  padding: 0;
+  color: #727272;
+  font-size: 18px;
+  font-family: "Playfair", serif;
+}
+
+button {
+  background-color: #92d2f7;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: none;
+  transition: all 200em ease-in-out;
+  box-shadow: 5px 5px 10px rgba(85, 133, 181, 0.6);
+}
+
+button:hover {
+  background: #3c799c;
+  cursor: pointer;
+}
+
+.app-wrapper {
+  max-width: 600px;
+  margin: 100px auto;
+}
+
+.weather-app {
+  background-color: #fff;
+  border: 1px solid rgba(57, 93, 130, 0.6);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 5px 5px 10px rgba(101, 155, 209, 0.7);
+}
+
+.overview {
+  margin: 20px 0;
+}
+
+.weatherTemperature img {
+  margin-right: 5px;
+}
+
+.weatherTemperature strong {
+  font-size: 45px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.weatherTemperature .units {
+  position: relative;
+  font-size: 16px;
+  top: -22px;
+}
+
+.description {
+  padding-top: 8px;
+}
