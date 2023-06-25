@@ -32,8 +32,10 @@ function showWeatherInfo(response) {
   let dateElement = document.querySelector("#date");
   let iconElement = document.querySelector("#icon");
 
+  celsiusTemperature = response.data.temperature.current;
+
   cityElement.innerHTML = response.data.city;
-  temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
   humidityElement.innerHTML = response.data.temperature.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   pressureElement.innerHTML = response.data.temperature.pressure;
@@ -59,9 +61,6 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
-let searchForm = document.querySelector("#search-form");
-searchForm.addEventListener("submit", handleSubmit);
-
 function showLocation(position) {
   let latitude = position.coords.latitude;
   let longitude = position.coords.longitude;
@@ -75,7 +74,35 @@ function showCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(showLocation);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  celsiusElement.classList.remove("active");
+  fahrenheitElement.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  celsiusElement.classList.add("active");
+  fahrenheitElement.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let searchForm = document.querySelector("#search-form");
+searchForm.addEventListener("submit", handleSubmit);
+
 let currentButton = document.querySelector("#current-btn");
 currentButton.addEventListener("click", showCurrentLocation);
+
+let celsiusTemperature = null;
+
+let temperatureElement = document.querySelector("#temperature");
+
+let fahrenheitElement = document.querySelector("#fahrenheit-link");
+fahrenheitElement.addEventListener("click", showFahrenheit);
+
+let celsiusElement = document.querySelector("#celsius-link");
+celsiusElement.addEventListener("click", showCelsius);
 
 searchCity("London");

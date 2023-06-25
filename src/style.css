@@ -51,7 +51,7 @@ button:hover {
 }
 
 .overview {
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .weatherTemperature img {
@@ -74,4 +74,14 @@ button:hover {
 
 .description {
   padding-top: 8px;
+}
+
+.weatherTemperature .active {
+  color: #000000;
+  cursor: default;
+  text-decoration: none;
+}
+
+.weatherTemperature .active:hover {
+  text-decoration: none;
 }
