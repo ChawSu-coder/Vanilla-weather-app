@@ -85,3 +85,33 @@ button:hover {
 .weatherTemperature .active:hover {
   text-decoration: none;
 }
+
+.forecast {
+  border: 1px solid rgba(57, 93, 130, 0.6);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.forecast-title {
+  margin: 20px 0;
+  font-style: italic;
+  font-family: "Roboto", sans-serif;
+}
+
+.weather-forecast-date,
+.weather-forecast-temperature {
+  text-align: center;
+  font-family: "Playfair", serif;
+  font-size: 18px;
+}
+
+.forecast-img {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.min-temperature,
+.weather-forecast-date {
+  color: #92d2f7;
+}
